@@ -1,0 +1,186 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <lbd-chart
+                  [title]="'Death Statistics'"
+                  [subtitle]="'Total deaths due to corona virus'"
+                  [chartClass]="'ct-perfect-fourth'"
+                  [chartType]="emailChartType"
+                  [chartData]="emailChartData"
+                  [legendItems]="emailChartLegendItems"
+                  [withHr]="true"
+                  [footerIconClass]="'fa fa-clock-o'"
+                  [footerText]="'Sync with the facts published by WHO'">
+                </lbd-chart>
+            </div>
+            <div class="col-md-8">
+                <lbd-chart
+                  [title]="'Patient Behavior'"
+                  [subtitle]="'24 Hours performance'"
+                  [chartType]="hoursChartType"
+                  [chartData]="hoursChartData"
+                  [chartOptions]="hoursChartOptions"
+                  [chartResponsive]="hoursChartResponsive"
+                  [legendItems]="hoursChartLegendItems"
+                  [withHr]="true"
+                  [footerIconClass]="'fa fa-history'"
+                  [footerText]="'Updated 3 minutes ago'">
+                </lbd-chart>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <lbd-chart
+                  [title]="'Active Cases'"
+                  [subtitle]="'All over the world'"
+                  [chartType]="activityChartType"
+                  [chartData]="activityChartData"
+                  [chartOptions]="activityChartOptions"
+                  [chartResponsive]="activityChartResponsive"
+                  [legendItems]="activityChartLegendItems"
+                  [withHr]="true"
+                  [footerIconClass]="'fa fa-check'"
+                  [footerText]="'Data information certified'">
+                </lbd-chart>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Task</h4>
+                        <p class="category">As per  WHO Guidelines</p>
+                    </div>
+                    <div class="content">
+                        <div class="table-full-width">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox1" type="checkbox">
+                                                <label for="checkbox1">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Wash your hands frequently</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked>
+                                                <label for="checkbox2">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Maintain social distancing</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox3" type="checkbox" checked>
+                                                <label for="checkbox3">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Avoid touching eyes, nose and mouth
+                                        </td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox4" type="checkbox">
+                                                <label for="checkbox4">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Practice respiratory hygiene</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox5" type="checkbox" >
+                                                <label for="checkbox5">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>If you have fever, cough and difficulty breathing, seek medical care early</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="checkbox6" type="checkbox">
+                                                <label for="checkbox6">
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Stay informed and follow advice given by your healthcare provider</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-history"></i> Updated 3 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

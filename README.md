@@ -1,0 +1,1 @@
+#Corona App to get status of disease around the world
