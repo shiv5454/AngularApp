@@ -2,23 +2,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 col-md-6" style="text-align: center">
+                <h3>Total Cases:</h3>
+                <div class="maincounter-number">
+                    <span style="color:rgb(30, 6, 61)">{{this.worldWideCases.total_cases}}</span>
+                </div>
                 <h3>Active Cases:</h3>
                 <div class="maincounter-number">
-                    <span style="color:#aaa">2,498,998 </span>
+                    <span style="color:rgb(66, 2, 68)">{{this.worldWideCases.active_cases}}</span>
                 </div>
                 <h3>Deaths:</h3>
 
                 <div class="maincounter-number">
-                    <span style="color:rgb(100, 7, 7)">98,998 </span>
+                    <span style="color:rgb(100, 7, 7)">{{this.worldWideCases.total_deaths}} </span>
                 </div>
                 <h3>Recovered:</h3>
 
                 <div class="maincounter-number">
-                    <span style="color:rgb(5, 71, 49)">1,98,998 </span>
+                    <span style="color:rgb(5, 71, 49)">{{this.worldWideCases.total_recovered}} </span>
                 </div>
+                
             </div>
             <div class="col-lg-6 col-md-6" style="text-align: center">
               <app-carousel></app-carousel>
+              
+                <div class="maincounter-number">
+                    <h5>Last Updated At :</h5>
+                    <span style="color:rgb(8, 8, 8); font-size: 15px; ">{{this.worldWideCases.statistic_taken_at}}</span>
+                </div>
              </div>
         </div>
     </div>

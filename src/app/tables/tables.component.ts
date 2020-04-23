@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TrackerService } from 'app/services/tracker.service';
+import { CoronaDetails } from 'app/interfaces/Interfaces';
 
 declare interface TableData {
     headerRow: string[];
-    dataRows: string[][];
+    dataRows: CoronaDetails[];
 }
 
 @Component({
@@ -13,32 +15,38 @@ declare interface TableData {
 export class TablesComponent implements OnInit {
     public tableData1: TableData;
     public tableData2: TableData;
-
-  constructor() { }
+    public showTable : boolean;
+    public allCoronaCases:CoronaDetails[];
+    
+  constructor(private trackerService:TrackerService) { 
+      this.showTable=false;
+  }
 
   ngOnInit() {
+    this.trackerService.getAllCoronaCases().subscribe(res=>{
+        if(res!=null){
+            this.allCoronaCases=res.countries_stat;
+             this.showTable=true;
+             console.log(this.showTable)
+        }
+    });
+    
       this.tableData1 = {
-          headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
-          dataRows: [
-              ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
-              ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
-              ['3', 'Sage Rodriguez', 'Netherlands', 'Baileux', '$56,142'],
-              ['4', 'Philip Chaney', 'Korea, South', 'Overland Park', '$38,735'],
-              ['5', 'Doris Greene', 'Malawi', 'Feldkirchen in Kärnten', '$63,542'],
-              ['6', 'Mason Porter', 'Chile', 'Gloucester', '$78,615']
-          ]
+          headerRow: ['Country','Total Cases','Deaths','Recovered', 'New Cases','Active Cases', 'Deaths/1M Populn','Total Tests','Tests/1M Populn'],
+          dataRows: this.allCoronaCases
       };
       this.tableData2 = {
-          headerRow: [ 'ID', 'Name',  'Salary', 'Country', 'City' ],
-          dataRows: [
-              ['1', 'Dakota Rice','$36,738', 'Niger', 'Oud-Turnhout' ],
-              ['2', 'Minerva Hooper', '$23,789', 'Curaçao', 'Sinaai-Waas'],
-              ['3', 'Sage Rodriguez', '$56,142', 'Netherlands', 'Baileux' ],
-              ['4', 'Philip Chaney', '$38,735', 'Korea, South', 'Overland Park' ],
-              ['5', 'Doris Greene', '$63,542', 'Malawi', 'Feldkirchen in Kärnten', ],
-              ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
-          ]
+          headerRow:['Country','Cases','Deaths','Recovered','New Deaths', 'New Cases','Critical Cases','Active Cases', 'Deaths/1M Populn','Total Tests','Tests/1M Populn'],
+          dataRows: null
       };
   }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.allCoronaCases=this.allCoronaCases.filter(function (item) {
+        return !item.country_name.toLowerCase().includes(filterValue.trim().toLowerCase());
+        });  
+        console.log(this.allCoronaCases);
+    }
 
 }

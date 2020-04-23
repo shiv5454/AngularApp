@@ -10,7 +10,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 
 import { AppComponent } from './app.component';
-
+import { MatTableModule } from '@angular/material/table'
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,7 +26,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     FooterModule,
     SidebarModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    MatTableModule
   ],
   declarations: [
     AppComponent,

@@ -4,11 +4,16 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Striped Table with Hover</h4>
-                        <p class="category">Here is a subtitle for this table</p>
+                        <!-- <h4 class="title">Striped Table with Hover</h4>
+                        <p class="category">Here is a subtitle for this table</p> -->
+                        <mat-form-field style="float:right; margin-right: 12px;">
+                            <mat-label style="margin-right: 10px;">Search By Country</mat-label>
+                            <input matInput (keyup)="applyFilter($event)">
+                          </mat-form-field>
                     </div>
+                    
                     <div class="content table-responsive table-full-width">
-                          <table class="table table-hover table-striped">
+                          <table class="table table-hover table-striped" *ngIf="this.showTable">
                                 <thead>
                                     <tr>
                                         <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
@@ -16,7 +21,15 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let row of tableData1.dataRows">
-                                        <td *ngFor="let cell of row">{{cell}}</td>
+                                        <td>{{row.country_name}}</td>
+                                        <td>{{row.cases}}</td>
+                                        <td>{{row.deaths}}</td>
+                                        <td>{{row.total_recovered}}</td>
+                                        <td>{{row.new_cases}}</td>
+                                        <td>{{row.active_cases}}</td>
+                                        <td>{{row.deaths_per_1m_population}}</td>
+                                        <td>{{row.total_tests}}</td>
+                                        <td>{{row.tests_per_1m_population}}</td>
                                     </tr>
                                 </tbody>
                           </table>
