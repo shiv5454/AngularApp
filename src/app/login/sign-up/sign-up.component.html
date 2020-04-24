@@ -1,0 +1,66 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">SIGN UP</h4>
+                    </div>
+                    <div class="content">
+                        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" name="firstName" formControlName="firstName" required placeholder="First Name">
+                                        <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+                                        class="alert alert-danger">
+                                </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" formControlName="lastName" required placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" formControlName="email" required placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input name="password" type="password" class="form-control" formControlName="password" required placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input name="confirm" type="confirm" class="form-control" formControlName="confirm"
+                                id="confirm" appCustomeEqualValidator="password" required placeholder="Confirm Password">
+                            </div>
+                            <span style="color: red;" *ngIf="confirm?.touched && confirm.error.notEqual">
+                                    Password
+                            </span>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">SIGN UP</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ngb-carousel [interval]="false" class="carousel-content">  
+                    <ng-template ngbSlide>  
+                        <img src="../../../assets/img/img1.jpg" style="width: 100%"alt="Delhi Metro">   
+                    </ng-template>  
+                    <ng-template ngbSlide>  
+                        <img src="../../../assets/img/img2.jpg" style="width: 100%" alt="Bangalore Metro">   
+                    </ng-template>  
+                    <ng-template ngbSlide>  
+                        <img src="../../../assets/img/img3.jpg" style="width: 100%" alt="Channai Metro">  
+                    </ng-template>   
+                </ngb-carousel>  
+            </div>
+        </div>
+    </div>
+</div>

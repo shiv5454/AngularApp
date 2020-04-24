@@ -1,0 +1,29 @@
+.main-content{
+    background-image: url('../../../assets/img/544750.jpg');
+    background-size: cover;
+     background-repeat: no-repeat;
+     height: 100vh;
+}
+
+.card{
+    margin-left: auto;
+    width: 70%;
+    background-color: rgba(0,0,0,0.5) !important;
+    top: 24%;
+ }
+ .carousel-content{
+    top: 40%;
+    margin: auto;
+    width: 50%;
+ }
+ .card .title{
+     font-weight: 600;
+     color: #ffffff;
+ }
+ .card label {
+     color: #ffffff;
+ }
+
+ .ng-touched.ng-invalid {
+    border-color: red;
+  }

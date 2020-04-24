@@ -67,7 +67,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a *ngIf="loginService.isUserLoggedIn()" routerLink="/login">
                         <p>Log out</p>
                     </a>
                 </li>

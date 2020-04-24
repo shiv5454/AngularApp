@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -15,11 +15,15 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { LoginHomeComponent } from './login/login-home/login-home.component';
+import { SignUpComponent } from './login/sign-up/sign-up.component';
+import { CustomeEqualValidatorDirective } from './directives/custome-equal-validator.directive';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
     NavbarModule,
@@ -33,7 +37,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppComponent,
     AdminLayoutComponent,
     DashboardComponent,
-    CarouselComponent
+    LoginHomeComponent,
+    SignUpComponent,
+    CarouselComponent,
+    CustomeEqualValidatorDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
