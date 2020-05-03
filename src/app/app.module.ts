@@ -8,16 +8,19 @@ import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
-
+import { MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { MatTableModule } from '@angular/material/table'
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselComponent } from './carousel/carousel.component';
 import { LoginHomeComponent } from './login/login-home/login-home.component';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 import { CustomeEqualValidatorDirective } from './directives/custome-equal-validator.directive';
+import { LbdModule } from './lbd/lbd.module';
+import { TaskComponent } from './task/task/task.component';
+import { CommentComponent } from './comments/comment/comment.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { NgSelectModule } from '@ng-select/ng-select'
 
 @NgModule({
   imports: [
@@ -27,11 +30,14 @@ import { CustomeEqualValidatorDirective } from './directives/custome-equal-valid
     RouterModule,
     HttpClientModule,
     NavbarModule,
-    FooterModule,
+    FooterModule,    
+    LbdModule,
     SidebarModule,
     AppRoutingModule,
-    NgbModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    NgxSpinnerModule ,
+    NgSelectModule
   ],
   declarations: [
     AppComponent,
@@ -39,8 +45,10 @@ import { CustomeEqualValidatorDirective } from './directives/custome-equal-valid
     DashboardComponent,
     LoginHomeComponent,
     SignUpComponent,
-    CarouselComponent,
-    CustomeEqualValidatorDirective
+    CustomeEqualValidatorDirective,
+    TaskComponent,
+    CommentComponent,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

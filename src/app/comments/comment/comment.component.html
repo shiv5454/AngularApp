@@ -1,0 +1,42 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-md-6">
+            <div *ngIf="showPreviousCmt">
+            <div class="card" *ngFor="let cmt of this.cmtRes.commentsList">
+                <div class="header">
+                    <h5 class="font-weight-bold" style="color: #3b536f;">Title</h5>
+                    <span>{{cmt.title}}</span>
+                </div>
+                <div class="content">
+                    <h6 class="font-weight-bold" style="color: #3b536f;">Comments</h6>
+                    <span>{{cmt.comment}}</span>
+                </div>
+            </div>
+        </div> 
+    </div>
+        <div class="col-md-6">
+            <div class="card">
+                <form ngNativeValidate [formGroup]="commentsForm" class="form-group" (ngSubmit)="onSubmit($event)">
+
+                    <div class="header">
+                        <h2>Title</h2>
+                        <input name="title" formControlName="title" placeholder="Title" class="form-control" required type="text">
+                    </div>
+                    <div class="content">
+                        <h3 class="font-weight-bold">Comments</h3>
+                        <textarea name="comment" formControlName="comment" placeholder="Comments" class="form-control" required type="text"></textarea>
+                    </div>
+                    <div class="content" ><button class="btn btn-primary pull-right" type="submit">Comment</button>
+                    </div>
+
+                </form>
+               
+            </div>
+        </div> 
+        </div>
+    </div>
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+        <p style="color: white">Please Wait. </p>  
+        </ngx-spinner> 
+

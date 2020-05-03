@@ -7,6 +7,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthGaurdService } from './services/auth-gaurd.service';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 import { LoginHomeComponent } from './login/login-home/login-home.component';
+import { ErrorComponent } from './shared/error/error.component';
 
 const routes: Routes =[
   {
@@ -18,8 +19,8 @@ const routes: Routes =[
     component: SignUpComponent
   },
   {
-    path: 'dashboard',
-    redirectTo: 'dashboard',
+    path: 'home',
+    redirectTo: 'home',
     pathMatch: 'full',
     canActivate:[AuthGaurdService]
   }, {
@@ -33,7 +34,7 @@ const routes: Routes =[
   }]},
   {
     path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: 'home',
     canActivate:[AuthGaurdService]
   }
 ];
@@ -43,9 +44,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
-       useHash: true
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [
   ],

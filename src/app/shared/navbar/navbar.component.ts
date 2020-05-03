@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { AuthenticationService } from 'app/services/authentication.service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
     // moduleId: module.id,
@@ -15,8 +16,19 @@ export class NavbarComponent implements OnInit{
     private toggleButton: any;
     private sidebarVisible: boolean;
 
+    public user = sessionStorage.getItem('fullName')
+
     constructor(location: Location,  private element: ElementRef,
-        private loginService:AuthenticationService) {
+        public loginService:AuthenticationService,private router: Router) {
+            router.events.subscribe((val) => { 
+                if(val instanceof NavigationEnd){
+                    var element = document.getElementById("toggle");
+                    element.classList.remove("toggled");
+                    const body = document.getElementsByTagName('body')[0];
+                    this.sidebarVisible = false;
+                    body.classList.remove('nav-open');
+                }
+            });
       this.location = location;
           this.sidebarVisible = false;
     }

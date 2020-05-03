@@ -1,5 +1,29 @@
-.maincounter-number {
-    font-weight: 700;
-    color: #696969;
-    font-size: 32px;
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.error-div{
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    
+}
+.div-card{
+    max-height: 100px;
+    width: 35%;
+    margin:auto;
+}
+
+.custom-sel{
+    color: #141898;
+    font-weight: bold;
+    padding: 8px 12px;
+    height: 48px;
+    align-items: center;
+    border-radius: 19px;
+    box-shadow: 5px 3px #888;
+    width: 100%;
+}
+@media(max-width:769px){
+    .div-card{
+        width: 100%;
+    }
 }

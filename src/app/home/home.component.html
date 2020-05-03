@@ -1,186 +1,53 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <lbd-chart
-                  [title]="'Death Statistics'"
-                  [subtitle]="'Total deaths due to corona virus'"
-                  [chartClass]="'ct-perfect-fourth'"
-                  [chartType]="emailChartType"
-                  [chartData]="emailChartData"
-                  [legendItems]="emailChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-clock-o'"
-                  [footerText]="'Sync with the facts published by WHO'">
-                </lbd-chart>
-            </div>
-            <div class="col-md-8">
-                <lbd-chart
-                  [title]="'Patient Behavior'"
-                  [subtitle]="'24 Hours performance'"
-                  [chartType]="hoursChartType"
-                  [chartData]="hoursChartData"
-                  [chartOptions]="hoursChartOptions"
-                  [chartResponsive]="hoursChartResponsive"
-                  [legendItems]="hoursChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-history'"
-                  [footerText]="'Updated 3 minutes ago'">
-                </lbd-chart>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <lbd-chart
-                  [title]="'Active Cases'"
-                  [subtitle]="'All over the world'"
-                  [chartType]="activityChartType"
-                  [chartData]="activityChartData"
-                  [chartOptions]="activityChartOptions"
-                  [chartResponsive]="activityChartResponsive"
-                  [legendItems]="activityChartLegendItems"
-                  [withHr]="true"
-                  [footerIconClass]="'fa fa-check'"
-                  [footerText]="'Data information certified'">
-                </lbd-chart>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title">Task</h4>
-                        <p class="category">As per  WHO Guidelines</p>
-                    </div>
-                    <div class="content">
-                        <div class="table-full-width">
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox1" type="checkbox">
-                                                <label for="checkbox1">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Wash your hands frequently</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox2" type="checkbox" checked>
-                                                <label for="checkbox2">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Maintain social distancing</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox3" type="checkbox" checked>
-                                                <label for="checkbox3">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Avoid touching eyes, nose and mouth
-                                        </td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox4" type="checkbox">
-                                                <label for="checkbox4">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Practice respiratory hygiene</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox5" type="checkbox" >
-                                                <label for="checkbox5">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>If you have fever, cough and difficulty breathing, seek medical care early</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkbox">
-                                                <input id="checkbox6" type="checkbox">
-                                                <label for="checkbox6">
-
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>Stay informed and follow advice given by your healthcare provider</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="footer">
-                            <hr>
-                            <div class="stats">
-                                <i class="fa fa-history"></i> Updated 3 minutes ago
-                            </div>
-                        </div>
+            <!-- <h2>World Wide Cases</h2> -->
+            <div class="col-lg-6 col-md-6 dashboard-div" *ngIf="this.showData">
+                
+                <div class="iblock total-case">
+                    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.28 96" class="h-12 py-1 m-auto custom-svg"><path fill="#718096" d="M68.43,2H31.57a4.4,4.4,0,0,0-4.39,4.39V18.3H8.75a4.4,4.4,0,0,0-4.39,4.39V93.61A4.4,4.4,0,0,0,8.75,98h82.5a4.4,4.4,0,0,0,4.39-4.39V39a4.4,4.4,0,0,0-4.39-4.39H72.82V6.39A4.4,4.4,0,0,0,68.43,2ZM23.92,84.49a2.27,2.27,0,0,1-2.27,2.27H16.41a2.27,2.27,0,0,1-2.27-2.27V79.25A2.26,2.26,0,0,1,16.41,77h5.24a2.27,2.27,0,0,1,2.27,2.27Zm0-16.3a2.27,2.27,0,0,1-2.27,2.27H16.41a2.27,2.27,0,0,1-2.27-2.27V63a2.27,2.27,0,0,1,2.27-2.27h5.24A2.27,2.27,0,0,1,23.92,63h0Zm0-16.3a2.27,2.27,0,0,1-2.27,2.27H16.41a2.27,2.27,0,0,1-2.27-2.27h0V46.65a2.27,2.27,0,0,1,2.27-2.27h5.24a2.27,2.27,0,0,1,2.27,2.27h0Zm0-16.3a2.27,2.27,0,0,1-2.27,2.27H16.41a2.27,2.27,0,0,1-2.27-2.27h0V30.35a2.27,2.27,0,0,1,2.27-2.27h5.24a2.27,2.27,0,0,1,2.27,2.27h0Zm22.82,48.9a2.27,2.27,0,0,1-2.27,2.27H39.23A2.27,2.27,0,0,1,37,84.49V79.25A2.27,2.27,0,0,1,39.23,77h5.24a2.27,2.27,0,0,1,2.27,2.27Zm0-16.3a2.27,2.27,0,0,1-2.27,2.27H39.23A2.27,2.27,0,0,1,37,68.19V63a2.27,2.27,0,0,1,2.27-2.27h5.24A2.27,2.27,0,0,1,46.78,63h0Zm0-16a2.27,2.27,0,0,1-2.27,2.27H39.23A2.26,2.26,0,0,1,37,52.17V46.93a2.27,2.27,0,0,1,2.27-2.27h5.24a2.27,2.27,0,0,1,2.27,2.27h0ZM51.81,36.7H48.19a2,2,0,0,1-2-2V28.34H39.83a2,2,0,0,1-2-2V22.67a2,2,0,0,1,2-2h6.31V14.31a2,2,0,0,1,2-2h3.62a2,2,0,0,1,2,2v6.31h6.31a2,2,0,0,1,2,2v3.62a2,2,0,0,1-2,2H53.86v6.31A2,2,0,0,1,52,36.7ZM63,84.49a2.27,2.27,0,0,1-2.27,2.27h-5.2a2.27,2.27,0,0,1-2.27-2.27V79.25A2.26,2.26,0,0,1,55.53,77h5.24A2.27,2.27,0,0,1,63,79.25Zm0-16.3a2.27,2.27,0,0,1-2.27,2.27h-5.2a2.27,2.27,0,0,1-2.27-2.27V63a2.27,2.27,0,0,1,2.27-2.27h5.24A2.27,2.27,0,0,1,63,63Zm0-16a2.27,2.27,0,0,1-2.27,2.27h-5.2a2.27,2.27,0,0,1-2.27-2.27h0V46.93a2.27,2.27,0,0,1,2.27-2.27h5.24A2.27,2.27,0,0,1,63,46.93Zm13-5.53a2.27,2.27,0,0,1,2.27-2.27h5.24a2.27,2.27,0,0,1,2.27,2.27V51.9a2.27,2.27,0,0,1-2.27,2.27H78.35a2.27,2.27,0,0,1-2.27-2.27ZM76,63a2.27,2.27,0,0,1,2.27-2.27h5.24A2.27,2.27,0,0,1,85.78,63V68.2a2.27,2.27,0,0,1-2.27,2.27H78.35a2.27,2.27,0,0,1-2.27-2.27Zm0,16.3A2.26,2.26,0,0,1,78.28,77h5.31a2.27,2.27,0,0,1,2.27,2.27v5.24a2.27,2.27,0,0,1-2.27,2.27H78.35a2.27,2.27,0,0,1-2.27-2.27Z" transform="translate(-4.36 -2)"></path></svg>
+                    <div class="iblock_text">
+                        
+                        <span class="icount">{{this.worldWideCases.total_cases}}</span>
+                        <div class="info_label">Total Cases</div>
                     </div>
                 </div>
+                <div class="iblock active-case">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.07 89.2" class="h-12 py-1 m-auto custom-svg"><g id="Ebene_1" data-name="Ebene 1"><path fill="#c05621" d="M96.1,77.3,60.2,11.5A11.59,11.59,0,0,0,49.9,5.4h0a11.59,11.59,0,0,0-10.3,6.1L3.9,77.3a11.71,11.71,0,0,0,.2,11.6,11.54,11.54,0,0,0,10.1,5.7H85.7A11.76,11.76,0,0,0,96.1,77.3ZM45.6,34.5a5.91,5.91,0,0,1,4.3-1.9,5.8,5.8,0,0,1,5.8,5.8v.8l-3,24a8.63,8.63,0,0,0-2.8-.4,8,8,0,0,0-2.7.4l-3-24A6.44,6.44,0,0,1,45.6,34.5Zm4.3,44.6a5.8,5.8,0,1,1,5.8-5.8A5.68,5.68,0,0,1,49.9,79.1Z" transform="translate(-2.46 -5.4)"></path></g></svg>
+                    <div class="iblock_text">
+                        
+                        <span class="icount">{{this.worldWideCases.active_cases}}</span>
+                        <div class="info_label">Active Cases</div>
+                    </div>
+                </div>
+
+                <div class="iblock discharge"> 
+                    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.29 81.35" class="h-12 py-1 m-auto custom-svg"><path fill="#276749" d="M72.31,9.32c-12.4,0-19.9,8.3-22.4,11.06C47.4,18,37.24,9.43,27.54,9.43c-10.66,0-21.69,8.93-21.69,23.88C5.85,48,21.17,62,32.36,72.3L50,90.68,67.56,72.41C78.78,62.12,94.14,48,94.14,33.31,94.14,19,85.37,9.32,72.31,9.32Zm-4,47.5H57v11H42.62v-11h-11V42.44h11V31.14H57v11.3H68.3V56.82Z" transform="translate(-5.85 -9.32)"></path></svg>
+                    <div class="iblock_text">
+                        <span class="icount">{{this.worldWideCases.total_recovered}}</span>
+                        <div class="info_label">Recovered </div>
+                    </div>
+                </div>
+                <div class="iblock death_case">
+                    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" class="h-12 py-1 m-auto custom-svg"><path fill="#c53030" d="M46.54,24.69H2.91V9.45A1.46,1.46,0,0,0,0,9.45v29.1a1.46,1.46,0,0,0,2.91,0V33.32H45.09v5.23a1.46,1.46,0,0,0,2.91,0V26.15A1.46,1.46,0,0,0,46.54,24.69Z" transform="translate(0 -8)"></path> <path fill="#c53030" d="M6.44,23.68h8.8a2.43,2.43,0,0,0,2.43-2.43v-1a2.43,2.43,0,0,0-2.43-2.42H6.44A2.43,2.43,0,0,0,4,20.22v1A2.43,2.43,0,0,0,6.44,23.68Z" transform="translate(0 -8)"></path></svg>
+                    <div class="iblock_text">
+                        <span class="icount">{{this.worldWideCases.total_deaths}}</span>
+                        <div class="info_label">Deaths </div>
+                    </div>
+                </div>
+                <div class="iblock updated_at maincounter-number" style="color:rgb(8, 8, 8); font-size: 15px; ">
+                    <h3 class="iblock_text">Updated At :</h3>
+                    <span class="iblock_text">{{this.worldWideCases.statistic_taken_at}}</span>
+                </div>
+                
+            </div>
+            <div class="col-lg-6 col-md-6" style="text-align: center">
+              <app-carousel></app-carousel>            
             </div>
         </div>
     </div>
 </div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner> 
+

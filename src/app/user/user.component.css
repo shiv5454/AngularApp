@@ -1,0 +1,21 @@
+label{
+    font-weight: bold;
+     color: #385898;
+     margin-top: -5%; 
+}
+
+.title{
+    font-weight: bold;
+     color: #385898; 
+}
+
+.card-user .avatar {
+    margin-bottom: 0px;
+}
+.form-group{
+    margin-bottom: initial ;
+}
+
+.card .author i {
+    font-size: 23px;
+}

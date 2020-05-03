@@ -9,7 +9,10 @@
     margin-left: auto;
     width: 70%;
     background-color: rgba(0,0,0,0.5) !important;
-    top: 24%;
+    margin: auto;
+ }
+ .container{
+     height: 100%;
  }
  .carousel-content{
     top: 40%;
@@ -26,4 +29,17 @@
 
  .ng-touched.ng-invalid {
     border-color: red;
+  }
+
+
+  @media(max-width:767px){
+      
+.card{
+    width: inherit;
+    margin: auto;
+ }
+ .carousel-content{
+    top: inherit;
+    width: inherit;
+ }
   }

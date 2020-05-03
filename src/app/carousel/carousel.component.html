@@ -1,32 +1,20 @@
 
 <div class="carousal-div">
     <ngb-carousel>
-    <ng-template ngbSlide>
+    <ng-template ngbSlide *ngFor="let index of imgCount">
       <div class="picsum-img-wrapper" >
-        <img src="assets/img/corousal/img-1.jpg" alt="Random first slide">
+        <img src="assets/img/corousal/img-{{index}}.jpg" >
       </div>
-      <!-- <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div> -->
+    </ng-template>
+    <!-- <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="assets/img/corousal/img-2.jpg">
+      </div>
     </ng-template>
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img src="assets/img/corousal/img-2.jpg" alt="Random second slide">
+        <img src="assets/img/corousal/img-3.png">
       </div>
-      <!-- <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div> -->
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="assets/img/corousal/img-3.png" alt="Random third slide">
-      </div>
-      <!-- <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div> -->
-    </ng-template>
+    </ng-template> -->
   </ngb-carousel>
 </div>

@@ -1,33 +1,33 @@
 <div class="main-content" >
     <div class="container-fluid">
-        <div class="card">
-            <div class="header">
-                <h4 class="title">Notifications</h4>
-                <p class="category">Handcrafted by our friend <a target="_blank" href="https://github.com/mouse0270">Robert McIntosh</a>. Please checkout the <a href="http://bootstrap-notify.remabledesigns.com/" target="_blank">full documentation.</a></p>
-            </div>
             <div class="content">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h5>Notifications Style</h5>
+                    <!-- <div class="col-md-6" *ngIf="this.showNews">
+                        <div *ngFor="let news of newsDataArray">
                         <div class="alert alert-info">
-                            <span>This is a plain notification</span>
-                        </div>
-                        <div class="alert alert-info">
+                            <span (click)="this.showContent = !this.showContent" style="color: brown; font-weight: bold;"> {{news.author}}</span><br><br> -->
+                        <!-- </div><br>
+                        <div class="alert alert-info"> -->
+                            <!-- <button type="button" aria-hidden="true" class="close">×</button> -->
+                            <!-- <span (click)="this.showContent = !this.showContent" style="color: brown;" *ngIf="this.showContent">{{news.description}}</span>
+                        </div> -->
+                         <!--<div class="alert alert-info">
                             <button type="button" aria-hidden="true" class="close">×</button>
-                            <span>This is a notification with close button.</span>
+                            <span>{{this.newsDataArray[0].publishedAt}}</span>
                         </div>
+                         <div class="alert alert-info" data-notify="container">
+                         <button type="button" aria-hidden="true" class="close">×</button>
+                            <span data-notify="icon" class="pe-7s-bell"></span> 
+                            <span data-notify="message">{{this.newsDataArray[0].content}}</span>
+                        </div> 
                         <div class="alert alert-info" data-notify="container">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span data-notify="icon" class="pe-7s-bell"></span>
-                            <span data-notify="message">This is a notification with close button and icon.</span>
-                        </div>
-                        <div class="alert alert-info" data-notify="container">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span data-notify="icon" class="pe-7s-bell"></span>
-                            <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                             <button type="button" aria-hidden="true" class="close">×</button>
+                            <span data-notify="icon" class="pe-7s-bell"></span> 
+                            <span data-notify="message">{{this.newsDataArray[0].description}}</span>
+                        </div>-->
+                    <!-- </div>
+                    </div> -->
+                    <!-- <div class="col-md-6">
                         <h5>Notification states</h5>
                         <div class="alert alert-info">
                             <button type="button" aria-hidden="true" class="close">×</button>
@@ -79,8 +79,22 @@
                             <button class="btn btn-default btn-block" (click)="showNotification('bottom','right')">Bottom Right</button>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+                <!-- <label><button class="btn btn-primary" (click)="showNewsData('us')">World News</button></label>
+                <label class="pull-right"><button class="btn btn-primary" (click)="showNewsData('IN')">India News</button></label> -->
+                <ngb-accordion class="accordion" *ngFor="let news of newsDataArray">
+                    <ngb-panel title="{{news.author}}">
+                    <ng-template ngbPanelContent>
+                        <p class="font-weight-bold">{{news.title}}</p>
+                        {{news.description}} <a href="{{news.url}}">... Read More</a>
+                        <span class="text-primary pull-right ml-2">{{news.publishedAt | date :short}}</span>
+                    </ng-template>
+                    </ngb-panel>                
+                    </ngb-accordion>
         </div>
     </div>
 </div>
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner> 

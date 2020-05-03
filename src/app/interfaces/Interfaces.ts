@@ -14,6 +14,34 @@ export interface CoronaDetails {
     tests_per_1m_population:number;
 }
 
-export interface CountryDetails {
+export interface CountryWiseDetail {
 
+}
+
+export interface DistrictData{
+    district?:string;
+    active: number;
+    confirmed: number;
+    deceased: number;
+    delta: {
+        confirmed: number;
+        deceased: number;
+        recovered: number
+    }
+    notes: string;
+    recovered: number;
+}
+
+export interface NewsData{
+    author:string;
+    content:string;
+    description:string;
+    publishedAt:string;
+    source:{
+        id:string;
+        name:string;
+    };
+    title:string;
+    url:string;
+    urlToImage:string;
 }

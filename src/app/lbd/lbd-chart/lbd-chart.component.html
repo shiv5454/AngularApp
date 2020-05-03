@@ -1,10 +1,10 @@
 <div class="card">
   <div class="header">
-    <h4 class="title">{{ title }}</h4>
-    <p class="category">{{ subtitle }}</p>
+    <h3 class="title text-danger font-weight-bold">{{ title }}</h3>
+    <p class="category text-info font-weight-bold">{{ subtitle }}</p>
   </div>
   <div class="content">
-    <div [attr.id]="chartId" class="ct-chart {{ chartClass }}"></div>
+    <div [attr.id]="chartId" class="ct-chart {{ chartClass }}" style="margin: 5px;"></div>
 
     <div class="footer">
       <div class="legend">
@@ -13,7 +13,7 @@
         </span>
       </div>
       <hr *ngIf="withHr">
-      <div class="stats">
+      <div class="stats font-weight-bold">
         <i [ngClass]="footerIconClass"></i> {{ footerText }}
       </div>
     </div>

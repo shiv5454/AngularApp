@@ -1,30 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-default">
+<nav class="navbar navbar-expand-lg navbar-default" style=" background-color: #3b536f;">
+    <!-- <div>
+        <label>Welcome</label><span> {{this.user}}</span>
+        </div> -->
+    <div class="navbar-header">        
+        <a class="navbar-brand" style="color: #fff;" >{{getTitle()}}</a>
+    </div>
+    <button type="button" class="navbar-toggle" id="toggle" data-toggle="collapse" (click)="sidebarToggle()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+   
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" (click)="sidebarToggle()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" >{{getTitle()}}</a>
-        </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left mr-auto">
-                <li>
+                <!-- <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-dashboard"></i>
                         <p class="hidden-lg hidden-md">{{getTitle()}}</p>
                     </a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                </li> -->
+                <li class="dropdown" style="width: 440px;">
+                    <a>
+                    <marquee style="color: #fff;">#IndiaFightAngainstCorona</marquee></a>
+                    <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-globe"></i>
-                        <b class="caret"></b>
+                        <b class="caret"></b> 
                         <span class="notification hidden-sm hidden-xs">5</span>
                         <p class="hidden-lg hidden-md">
                             5 Notifications
-                            <b class="caret"></b>
+                             <b class="caret"></b> 
                         </p>
                     </a>
                     <ul class="dropdown-menu">
@@ -33,28 +39,26 @@
                         <li><a href="#">Notification 3</a></li>
                         <li><a href="#">Notification 4</a></li>
                         <li><a href="#">Another notification</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">
                         <i class="fa fa-search"></i>
                         <p class="hidden-lg hidden-md">Search</p>
                     </a>
-                </li>
+                </li> -->
             </ul>
+            <!-- <span style="font-weight: bold; margin-top: 2%;">#IndiaFightsCorona COVID-19</span> -->
 
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#">
-                        <p>Account</p>
-                    </a>
+                <li >
+                    <a style="color: #fff;"><label>Welcome</label><span> {{this.user}}</span></a>    
                 </li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <p>
+                        <span>
                             Dropdown
-                            <b class="caret"></b>
-                        </p>
+                        </span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
@@ -65,10 +69,11 @@
                         <li class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li>
-                    <a *ngIf="loginService.isUserLoggedIn()" routerLink="/login">
-                        <p>Log out</p>
+                    <a *ngIf="loginService.isUserLoggedIn()" style="color: #fff;" routerLink="/login">
+                        <i class="fa fa-sign-out mr-2" aria-hidden="true"></i>
+                        <span>Log out</span>
                     </a>
                 </li>
                 <li class="separator hidden-lg hidden-md"></li>
@@ -76,3 +81,4 @@
         </div>
     </div>
 </nav>
+

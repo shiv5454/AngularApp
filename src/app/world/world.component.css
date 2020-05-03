@@ -1,0 +1,137 @@
+/* Structure */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+.div-custom{
+  max-height: 451px; 
+  overflow-y: scroll;
+}
+
+.error-div{
+  text-align: center;
+  margin: auto;
+  margin-top: 10%;
+  
+}
+
+.custom-label{
+  margin-right: 13px;
+  font-size: 17px;
+  color: #0c4f63;
+}
+.div-card{
+  max-height: 100px;
+  margin-left:12%;
+}
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .custom-sel{
+    color: #141898;
+    font-weight: bold;
+    padding: 8px 12px;
+    height: 48px;
+    align-items: center;
+    border-radius: 19px;
+    box-shadow: 5px 3px #888;
+}
+.custom-sel:hover{
+    border-radius: 19px;
+    box-shadow: 5px 3px #888;
+}
+  
+
+.table > th > td{
+      color: brown;
+      font-weight: 600;
+      white-space: initial;
+  } 
+
+ .custom-content{
+   padding: 30px 10px;
+ }
+
+ .card{
+  margin-bottom: 3%;
+  margin-top: 1.8%;
+  border: 2px solid;
+ }
+
+ .iblock {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 0 8px;  
+  font-weight: bold;
+  text-align: center;  
+}
+.active-case{    
+  margin: 1%;
+  width: 30%;
+  background: #a5c9fd;
+  background: -moz-linear-gradient(top, #a5c9fd 0%, #bde5fc 100%);
+  background: -webkit-linear-gradient(top, #a5c9fd 0%,#bde5fc 100%);
+  background: linear-gradient(to bottom, #a5c9fd 0%,#bde5fc 100%);
+  color: #002c57;
+  display: inline-block;
+}
+
+.discharge{
+  margin: 1%;
+  width: 30%;
+  background: #9be89c;
+  background: -moz-linear-gradient(top, #9be89c 0%, #cdf97d 100%);
+  background: -webkit-linear-gradient(top, #9be89c 0%,#cdf97d 100%);
+  background: linear-gradient(to bottom, #9be89c 0%,#cdf97d 100%);
+  color: #005c25;
+  display: inline-block;
+}
+
+.death_case{
+  margin: 1%;
+  width: 30%;
+  background: #fe8683;
+  background: -moz-linear-gradient(top, #fe8683 0%, #ff9d9b 100%);
+  background: -webkit-linear-gradient(top, #fe8683 0%,#ff9d9b 100%);
+  background: linear-gradient(to bottom, #fe8683 0%,#ff9d9b 100%);
+  color: #5a0401;
+  display: inline-block;
+}
+.iblock i {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url('https://www.mygov.in/sites/all/themes/mygov/images/covid/icons.png') -66px -60px no-repeat;
+}
+.py-1 {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+.custom-svg{
+  width: 50px;
+  height: 50px;
+}
+
+.info_title{
+  padding: 2%;
+  color: brown;
+  text-decoration: underline;
+}
+@media (max-width: 767px){
+  .div-card{
+      width: 65%
+  }
+  .active-case{    
+      width: inherit;
+      display: block;
+  }
+  
+  .discharge{
+      width: inherit;
+      display: block;
+  }
+  
+  .death_case{
+      width: inherit;
+      display: block;
+  }
+  
+  }

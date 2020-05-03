@@ -1,0 +1,81 @@
+.maincounter-number {
+    font-weight: 700;
+    color: #696969;
+    font-size: 32px;
+}
+.dashboard-div{
+    text-align: center; 
+    margin-top: 2%; 
+    font-size: 16px;
+}
+
+.py-1 {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+.custom-svg{
+    width: 50px;
+    height: 50px;
+}
+.iblock {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 0 8px;  
+    font-weight: bold;
+    text-align: center;  
+}
+.total-case{    
+    margin: 3%;
+    width: 40%;
+    background: -moz-linear-gradient(top, #171a1f 0%, #bde5fc 100%);
+    background: -webkit-linear-gradient(top, #171a1f 0%,#bde5fc 100%);
+    background: linear-gradient(to bottom, #171a1f 0%,#bde5fc 100%);
+    color: #010e1b;
+    display: inline-block;
+}
+
+.active-case{    
+    margin: 3%;
+    width: 40%;
+    background: -moz-linear-gradient(top, #4572b3 0%, #e4eff5 100%);
+    background: -webkit-linear-gradient(top, #4572b3 0%, #e4eff5 100%);
+    background: linear-gradient(to bottom, #4572b3 0%,#e4eff5 100%);
+    color: #031f3c;
+    display: inline-block;
+}
+
+.discharge{
+    margin: 3%;
+    width: 40%;
+    background: -moz-linear-gradient(top, #0bbb0e 0%, #cdf97d 100%);
+    background: -webkit-linear-gradient(top, #0bbb0e 0%,#cdf97d 100%);
+    background: linear-gradient(to bottom, #0bbb0e 0%,#cdf97d 100%);
+    color: #005c25;
+    display: inline-block;
+}
+
+.death_case{
+    margin: 3%;
+    width: 40%;
+    background: #fe8683;
+    background: -moz-linear-gradient(top, #f7433f 0%, #fddad9 100%);
+    background: -webkit-linear-gradient(top, #f7433f 0%,#fddad9 100%);
+    background: linear-gradient(to bottom, #f7433f 0%,#fddad9 100%);
+    color: #5a0401;
+    display: inline-block;
+}
+
+.updated_at{
+    margin: 3%;
+    background: -moz-linear-gradient(top, #c1ab0b 0%, #fdf9d9 100%);
+    background: -webkit-linear-gradient(top, #c1ab0b 0%,#fdf9d9 100%);
+    background: linear-gradient(to bottom, #c1ab0b 0%,#fdf9d9 100%);
+    color: #5a0401;
+}
+
+.iblock i {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: url('https://www.mygov.in/sites/all/themes/mygov/images/covid/icons.png') -66px -60px no-repeat;
+}

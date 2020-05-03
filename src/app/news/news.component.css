@@ -1,0 +1,17 @@
+::ng-deep .accordion{
+    width: 100%;
+}
+::ng-deep .accordion .card-header{
+    background-color: #3b536f;
+}
+
+::ng-deep .card{
+    margin-bottom: 15px;;
+}
+
+::ng-deep .accordion > .card >.card-header >.btn{
+    width: 100%;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+}

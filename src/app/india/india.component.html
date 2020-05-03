@@ -1,0 +1,109 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="div-card mt-3 mb-3">
+                <!-- <label class="custom-label">Select State :</label> -->
+                    <!-- <select class="custom-sel selectpicker" data-live-search=true searchable="Search here.." (change)="getDetails($event)">
+                        <option value="" selected>Select your state</option>
+                        <option *ngFor="let state of allIndianStates$ |async" value="{{state.code}}">{{state.state}}</option>
+                    </select> -->
+                    <ng-select  class="" [items]="allIndianStates" bindLabel="state" placeholder="Select State" 
+                        [(ngModel)]="selected" (change)="getDetails()">
+                    </ng-select>
+            </div>
+        </div>
+        <div class="col-md-12 div-custom" *ngIf="this.showTab;">
+            <div class="card">
+                <div class="content">
+                  
+                        <div class="information_row" id="#dashboard" style="font-size: 20px;">
+                            <div class="info_title">
+                           <marquee> <p>COVID-19  <b>{{this.overallCases.data.name | uppercase}}</b>  Dashboard
+                                <span >as on : <b>{{this.overallCases.data.updated_at | date :'short':'IST'}}</b></span>
+                            </p></marquee>
+                            </div>
+            
+                            <div class="iblock active-case">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.07 89.2" class="h-12 py-1 m-auto custom-svg"><g id="Ebene_1" data-name="Ebene 1"><path fill="#c05621" d="M96.1,77.3,60.2,11.5A11.59,11.59,0,0,0,49.9,5.4h0a11.59,11.59,0,0,0-10.3,6.1L3.9,77.3a11.71,11.71,0,0,0,.2,11.6,11.54,11.54,0,0,0,10.1,5.7H85.7A11.76,11.76,0,0,0,96.1,77.3ZM45.6,34.5a5.91,5.91,0,0,1,4.3-1.9,5.8,5.8,0,0,1,5.8,5.8v.8l-3,24a8.63,8.63,0,0,0-2.8-.4,8,8,0,0,0-2.7.4l-3-24A6.44,6.44,0,0,1,45.6,34.5Zm4.3,44.6a5.8,5.8,0,1,1,5.8-5.8A5.68,5.68,0,0,1,49.9,79.1Z" transform="translate(-2.46 -5.4)"></path></g></svg>
+                                <div class="iblock_text">
+                                    
+                                    <span class="icount">{{this.overallCases.data.latest_data.confirmed}}</span>
+                                    <div class="info_label">Active Cases</div>
+                                </div>
+                            </div>
+            
+                            <div class="iblock discharge"> 
+                                <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.29 81.35" class="h-12 py-1 m-auto custom-svg"><path fill="#276749" d="M72.31,9.32c-12.4,0-19.9,8.3-22.4,11.06C47.4,18,37.24,9.43,27.54,9.43c-10.66,0-21.69,8.93-21.69,23.88C5.85,48,21.17,62,32.36,72.3L50,90.68,67.56,72.41C78.78,62.12,94.14,48,94.14,33.31,94.14,19,85.37,9.32,72.31,9.32Zm-4,47.5H57v11H42.62v-11h-11V42.44h11V31.14H57v11.3H68.3V56.82Z" transform="translate(-5.85 -9.32)"></path></svg>
+                                <div class="iblock_text">
+                                    <span class="icount">{{this.overallCases.data.latest_data.recovered}}</span>
+                                    <div class="info_label">Recovered </div>
+                                </div>
+                            </div>
+                            <div class="iblock death_case">
+                                <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" class="h-12 py-1 m-auto custom-svg"><path fill="#c53030" d="M46.54,24.69H2.91V9.45A1.46,1.46,0,0,0,0,9.45v29.1a1.46,1.46,0,0,0,2.91,0V33.32H45.09v5.23a1.46,1.46,0,0,0,2.91,0V26.15A1.46,1.46,0,0,0,46.54,24.69Z" transform="translate(0 -8)"></path> <path fill="#c53030" d="M6.44,23.68h8.8a2.43,2.43,0,0,0,2.43-2.43v-1a2.43,2.43,0,0,0-2.43-2.42H6.44A2.43,2.43,0,0,0,4,20.22v1A2.43,2.43,0,0,0,6.44,23.68Z" transform="translate(0 -8)"></path></svg>
+                                <div class="iblock_text">
+                                    <span class="icount">{{this.overallCases.data.latest_data.deaths}}</span>
+                                    <div class="info_label">Deaths </div>
+                                </div>
+                            </div>
+                                       
+                        </div>                  
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>   
+  
+<div class="custom-content" *ngIf="this.showTable">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <div class="iblock active-case state">
+                        <div class="iblock_text">                            
+                            
+                            <div class="info_label">Total Cases : <span class="icount ml-3">{{allCases}}</span></div>
+                        </div>
+                    </div>
+    
+                    <div class="iblock discharge state"> 
+                        <div class="iblock_text">
+                            
+                            <div class="info_label">Recovered : <span class="icount ml-3">{{recovered}}</span></div>
+                        </div>
+                    </div>
+                    <div class="iblock death_case state">
+                        <div class="iblock_text">
+                            
+                            <div class="info_label">Deaths : <span class="icount ml-3">{{deaths}}</span></div>
+                        </div>
+                    </div>
+                   <!-- <label> <span>Total Cases: </span></label>
+                   <label> <span>Recovered Cases: </span>{{recovered}}</label>
+                   <label><span>Deaths Cases: </span>{{deaths}}</label> -->
+                </div>
+                <div class=" table-responsive table-custom">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th class="wrap text-danger font-weight-bold text-uppercase" *ngFor="let cell of tableData.headerRow">{{ cell }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of tableData.dataRows">
+                                <td class="wrap font-weight-bold">{{row.district}}</td>
+                                <td class=" wrap text-secondary font-weight-bold">{{row.confirmed}}</td>
+                                <!-- <td class="text-primary font-weight-bold">{{row.active}}</td>                                 -->
+                                <td class="wrap text-danger font-weight-bold">{{row.deceased}}</td>
+                                <td class="wrap text-success font-weight-bold">{{row.recovered}}</td>
+                                <!-- <td>{{row.delta.confirmed}}</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div><ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+    </ngx-spinner> 

@@ -1,23 +1,27 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from '../../home/home.component';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserComponent } from '../../user/user.component';
-import { TablesComponent } from '../../tables/tables.component';
-import { TypographyComponent } from '../../typography/typography.component';
+import { WorldComponent } from '../../world/world.component';
+import { IndiaComponent } from '../../india/india.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
+import { NewsComponent } from '../../news/news.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { DashboardComponent } from 'app/dashboard/dashboard.component';
+import { HomeComponent } from 'app/home/home.component';
+import { CommentComponent } from 'app/comments/comment/comment.component';
+import { TaskComponent } from 'app/task/task/task.component';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
     { path: 'home',           component: HomeComponent },
+    { path: 'dashboard',      component: DashboardComponent },    
     { path: 'user',           component: UserComponent },
-    { path: 'table',          component: TablesComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
+    { path: 'world',          component: WorldComponent },
+    { path: 'india',          component: IndiaComponent },
     { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'news',           component: NewsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'icons',        component: IconsComponent },
+    { path: 'task',        component: TaskComponent },
+    { path: 'comments',        component: CommentComponent },
 ];
